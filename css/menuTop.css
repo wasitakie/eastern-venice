@@ -1,0 +1,35 @@
+.menuBkTop{
+    margin: 0;
+    padding: 0;
+    background-color: #a87b51;
+}
+
+.menuBkTop ul {
+    list-style: none;
+    text-align: center;
+}
+.menuBkTop ul li{
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+.menuBkTop ul li a{
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    text-decoration: none;
+
+}
+.menuBkTop ul li a:hover{
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background-color: #75583c;
+    text-decoration: none;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+
+}

@@ -1,0 +1,80 @@
+.mainMenu {
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: #76b6f6;
+    padding: 1rem 0rem;
+    border-radius: 0.5rem;
+}
+
+.mainMenu ul {
+    list-style: none;
+    margin-left: -2rem;
+}
+
+.mainMenu ul li {
+    display: block;
+    width: auto;
+    height: auto;
+}
+
+.mainMenu ul li a {
+    display: block;
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    color: rgb(52, 49, 49);
+    padding: 0.5rem 1rem;
+}
+
+.mainMenu ul li a:hover {
+    display: block;
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    color: rgb(52, 49, 49);
+    padding: 0.5rem 1rem;
+    background-color: #3496f9;
+}
+
+.mainMenu ul li ul li {
+    visibility: hidden;
+    position: absolute;
+}
+
+.mainMenu ul li:hover ul li {
+    visibility: visible;
+    display: block;
+    position: relative;
+}
+
+.mainMenu ul li ul  {
+    visibility: visible;
+    display: block;
+    position: relative;
+    margin-left: -1rem;
+}
+
+
+.iconMenu {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    padding-right: 0.5rem;
+
+}
+.iconMenu a {
+    display: inline-block;
+    width: auto;
+    height: auto;
+
+}
+
+.iconMenu a .arrow {
+    display: inline-block;
+    width: auto;
+    height: auto;
+right: 0;
+    position: relative;
+}
