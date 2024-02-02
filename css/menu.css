@@ -20,7 +20,7 @@
 
 .mainMenu ul li a {
     display: block;
-    width: auto;
+    width: 100%;
     height: auto;
     text-decoration: none;
     color: rgb(52, 49, 49);
@@ -29,12 +29,12 @@
 
 .mainMenu ul li a:hover {
     display: block;
-    width: auto;
+    width: 100%;
     height: auto;
     text-decoration: none;
     color: rgb(52, 49, 49);
     padding: 0.5rem 1rem;
-    background-color: #3496f9;
+    background-color: #296EB4 ;
 }
 
 .mainMenu ul li ul li {
@@ -71,10 +71,17 @@
 
 }
 
-.iconMenu a .arrow {
+.iconMenu  .arrow {
     display: inline-block;
     width: auto;
     height: auto;
-right: 0;
+    right: 0;
     position: relative;
+    z-index: 99;
 }
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }

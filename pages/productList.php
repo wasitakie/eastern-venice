@@ -1,6 +1,6 @@
 <div class="productList">
     <div class="row">
-        <div class="col-md-3 my-3 ">
+        <div class="col-md-3 col-lg-6 col-xl-3  my-3 ">
             <div class="card border-secondary ">
                 <div class="cardImg">
                     <img class="card-img-top" src="../images/product/71nvxu0DWVL._AC_SX679_.jpg" alt="Title" />
@@ -20,7 +20,7 @@
             </div>
         </div>
 
-        <div class="col-md-3 my-3 ">
+        <div class="col-md-3 col-lg-6 col-xl-3  my-3 ">
             <div class="card border-secondary ">
                 <div class="cardImg">
                     <img class="card-img-top" src="../images/product/71nvxu0DWVL._AC_SX679_.jpg" alt="Title" />
@@ -40,7 +40,7 @@
             </div>
         </div>
 
-        <div class="col-md-3 my-3 ">
+        <div class="col-md-3 col-lg-6 col-xl-3  my-3 ">
             <div class="card border-secondary ">
                 <div class="cardImg">
                     <img class="card-img-top" src="../images/product/71nvxu0DWVL._AC_SX679_.jpg" alt="Title" />
@@ -60,7 +60,7 @@
             </div>
         </div>
 
-        <div class="col-md-3 my-3 ">
+        <div class="col-md-3 col-lg-6 col-xl-3  my-3 ">
             <div class="card border-secondary ">
                 <div class="cardImg">
                     <img class="card-img-top" src="../images/product/71nvxu0DWVL._AC_SX679_.jpg" alt="Title" />
@@ -80,7 +80,7 @@
             </div>
         </div>
 
-        <div class="col-md-3 my-3 ">
+        <div class="col-md-3 col-lg-6 col-xl-3  my-3 ">
             <div class="card border-secondary ">
                 <div class="cardImg">
                     <img class="card-img-top" src="../images/product/71nvxu0DWVL._AC_SX679_.jpg" alt="Title" />
@@ -100,7 +100,7 @@
             </div>
         </div>
 
-        <div class="col-md-3 my-3 ">
+        <div class="col-md-3 col-lg-6 col-xl-3  my-3 ">
             <div class="card border-secondary ">
                 <div class="cardImg">
                     <img class="card-img-top" src="../images/product/71nvxu0DWVL._AC_SX679_.jpg" alt="Title" />
@@ -120,7 +120,7 @@
             </div>
         </div>
 
-        <div class="col-md-3 my-3 ">
+        <div class="col-md-3 col-lg-6 col-xl-3  my-3 ">
             <div class="card border-secondary ">
                 <div class="cardImg">
                     <img class="card-img-top" src="../images/product/71nvxu0DWVL._AC_SX679_.jpg" alt="Title" />
