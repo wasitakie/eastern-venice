@@ -36,48 +36,38 @@ echo "session : " . session_id();
                 <div class="container">
                     <div class="col-md-12 slideProductMain">
                         <div class="slider-for">
-                            <div class="slideProduct1"><img
-                                    src="https://www.abcthebaby.com/wp-content/uploads/2023/05/Air-Purifier-Portable-01.webp"
-                                    alt="" srcset="">
+                            <div class="slideProduct1"><img src="https://www.abcthebaby.com/wp-content/uploads/2023/05/Air-Purifier-Portable-01.webp" alt="" srcset="">
                             </div>
-                            <div class="slideProduct1"><img
-                                    src="https://down-th.img.susercontent.com/file/th-11134207-7r98o-lnwiqgkh1euf76"
-                                    alt="" srcset="">
+                            <div class="slideProduct1"><img src="https://down-th.img.susercontent.com/file/th-11134207-7r98o-lnwiqgkh1euf76" alt="" srcset="">
                             </div>
-                            <div class="slideProduct1"><img
-                                    src="https://down-th.img.susercontent.com/file/th-11134207-7r990-lqtyrh909144af"
-                                    alt="" srcset="">
+                            <div class="slideProduct1"><img src="https://down-th.img.susercontent.com/file/th-11134207-7r990-lqtyrh909144af" alt="" srcset="">
                             </div>
-                            <div class="slideProduct1"><img
-                                    src="https://down-th.img.susercontent.com/file/th-11134207-7r98p-lqtyrh8zcqai17"
-                                    alt="" srcset="">
+                            <div class="slideProduct1"><img src="https://down-th.img.susercontent.com/file/th-11134207-7r98p-lqtyrh8zcqai17" alt="" srcset="">
                             </div>
                         </div>
 
                     </div>
                     <div class="col-md-12 slideProductSub">
                         <div class="slider-nav">
-                            <div class="slideProduct2"><img
-                                    src="https://www.abcthebaby.com/wp-content/uploads/2023/05/Air-Purifier-Portable-01.webp"
-                                    alt="" srcset="" width="20%">
+                            <div class="slideProduct2"><img src="https://www.abcthebaby.com/wp-content/uploads/2023/05/Air-Purifier-Portable-01.webp" alt="" srcset="" width="20%">
                             </div>
-                            <div class="slideProduct2"><img
-                                    src="https://down-th.img.susercontent.com/file/th-11134207-7r98o-lnwiqgkh1euf76"
-                                    alt="" srcset="" width="20%">
+                            <div class="slideProduct2"><img src="https://down-th.img.susercontent.com/file/th-11134207-7r98o-lnwiqgkh1euf76" alt="" srcset="" width="20%">
                             </div>
-                            <div class="slideProduct2"><img
-                                    src="https://down-th.img.susercontent.com/file/th-11134207-7r990-lqtyrh909144af"
-                                    alt="" srcset="" width="20%">
+                            <div class="slideProduct2"><img src="https://down-th.img.susercontent.com/file/th-11134207-7r990-lqtyrh909144af" alt="" srcset="" width="20%">
                             </div>
-                            <div class="slideProduct2"><img
-                                    src="https://down-th.img.susercontent.com/file/th-11134207-7r98p-lqtyrh8zcqai17"
-                                    alt="" srcset="" width="20%">
+                            <div class="slideProduct2"><img src="https://down-th.img.susercontent.com/file/th-11134207-7r98p-lqtyrh8zcqai17" alt="" srcset="" width="20%">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
+                <div class="subLink">
+                    <a href="../pages/index.php">หน้าหลัก/</a>
+                    <a href="../pages/index.php">สินค้าขายดี/</a>
+                    <a href="">ชื่อสินค้า</a>
+
+                </div>
                 <h1>Mini Air Purifier</h1>
                 <hr>
                 <p class="card-text"><b>รหัสสินค้า :</b> IT097 <br> <b>รายละเอียด : </b>
@@ -90,13 +80,11 @@ echo "session : " . session_id();
                     <form class="d-flex">
                         <div class="col">
                             <div class="mb-3 d-flex align-items-md-center  ">
-                                <i class="fa-solid fa-circle-minus" onclick="incrementValueD()"></i> &nbsp; <input
-                                    type="text" name="numProduct" id="total-count"
-                                    class="form-control w-25 number_only text-center " value="1"> &nbsp; <i
-                                    class="fa-solid fa-circle-plus" onclick="incrementValue()"></i>
-                                <button type="button" class="btnCard"><i class="fa-solid fa-cart-plus"></i>
-                                    เลือกสินค้า</button>
+                                <i class="fa-solid fa-circle-minus" onclick="incrementValueD()"></i> &nbsp; <input type="text" name="numProduct" id="total-count" class="form-control w-25 number_only text-center " value="1"> &nbsp; <i class="fa-solid fa-circle-plus" onclick="incrementValue()"></i>
+
                             </div>
+                            <hr> <button type="button" class="btnCard"><i class="fa-solid fa-cart-plus"></i>
+                                หยิบสินค้าใส่ตะกร้า</button>
                     </form>
 
                 </div>
@@ -106,54 +94,53 @@ echo "session : " . session_id();
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="../slick/slick/slick.min.js"></script>
     <script>
-    function incrementValue() {
-        var value = parseInt(document.getElementById('total-count').value, 10);
-        value = isNaN(value) ? 0 : value;
-        value++;
-        document.getElementById('total-count').value = value;
-    }
-
-    function incrementValueD() {
-        var value = parseInt(document.getElementById('total-count').value, 10);
-        value = isNaN(value) ? 0 : value;
-        value--;
-        if (value <= 1) {
-            document.getElementById('total-count').value = 1;
-        } else {
+        function incrementValue() {
+            var value = parseInt(document.getElementById('total-count').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value++;
             document.getElementById('total-count').value = value;
         }
 
-    }
+        function incrementValueD() {
+            var value = parseInt(document.getElementById('total-count').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value--;
+            if (value <= 1) {
+                document.getElementById('total-count').value = 1;
+            } else {
+                document.getElementById('total-count').value = value;
+            }
+
+        }
 
 
 
 
 
-    $('.slider-for').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        asNavFor: '.slider-nav'
-    });
-    $('.slider-nav').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        asNavFor: '.slider-for',
-        dots: true,
-        centerMode: true,
-        focusOnSelect: true,
-        arrows: true
+        $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.slider-nav'
+        });
+        $('.slider-nav').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.slider-for',
+            dots: true,
+            centerMode: true,
+            focusOnSelect: true,
+            arrows: true
 
-    });
+        });
 
-    $('.number_only').bind('keyup paste', function() {
-        this.value = this.value.replace(/[^0-9]/g, '');
-    });
+        $('.number_only').bind('keyup paste', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
     </script>
 </body>
 

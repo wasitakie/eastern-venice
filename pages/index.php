@@ -1,6 +1,6 @@
 <?php //include '../coon/config.php' 
 session_start();
-echo "session : " . session_id();
+echo "session : " . $_SESSION["idOrder"];
 ?>
 
 <!DOCTYPE html>
@@ -31,10 +31,10 @@ echo "session : " . session_id();
 
     <div class="container-fluid" style="padding-left: 0px;">
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-2 col-lg-3 col-xl-2">
                 <?php include '../menu/menu.php'; ?>
             </div>
-            <div class="col-md-10">
+            <div class="col-md-10 col-lg-9 col-xl-10">
                 <div class="col-md-12">
                     <div class="textTitle">
                         เราเป็นผู้นำเข้าของ Premium จัดทำ จัดหา และออกแบบ สินค้าพรีเมี่ยม และ Premium gift ทุกชนิดตาม
@@ -55,15 +55,14 @@ echo "session : " . session_id();
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="../slick/slick/slick.min.js"></script>
     <script>
-    $('.single-item').slick({
-        arrows: true,
-        autoplay: true,
-        dots: true
-    });
+        $('.single-item').slick({
+            arrows: true,
+            autoplay: true,
+            dots: true
+        });
     </script>
 </body>
 

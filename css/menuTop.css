@@ -33,3 +33,10 @@
     border-radius: 0.5rem 0.5rem 0rem 0rem;
 
 }
+
+.subLink a {
+    text-decoration: none;
+    margin-bottom: 1rem;
+    display: inline-block;
+    color: #878484;
+}
