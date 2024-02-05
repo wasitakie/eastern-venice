@@ -14,7 +14,7 @@
   align-items: center;
   width: 100%;
   height: auto;
-  background-color: #a87b51;
+  background-color: #FF6C1D;
 }
 
 .bannerFluid .logo {
@@ -35,9 +35,9 @@
   width: 100%;
   height: auto;
   padding: 1rem;
-  background-color: rgb(246, 172, 87);
+  background-color: #FF6C1D;
   border-radius: 0.5rem;
-  color: #343434;
+  color: #fff;
   margin-bottom: 2rem;
 }
 
@@ -95,4 +95,8 @@
   font-size: 30px;
   cursor: pointer;
   color: #707070;
+}
+
+.bigBox {
+  margin-left: 0.8rem;
 }

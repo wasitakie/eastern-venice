@@ -1,7 +1,7 @@
 .menuBkTop{
     margin: 0;
     padding: 0;
-    background-color: #a87b51;
+    background-color: #4B3107
 }
 
 .menuBkTop ul {
@@ -20,6 +20,7 @@
     padding: 0.5rem 1rem;
     color: #fff;
     text-decoration: none;
+    font-size: 14px;
 
 }
 .menuBkTop ul li a:hover{
@@ -31,7 +32,7 @@
     background-color: #75583c;
     text-decoration: none;
     border-radius: 0.5rem 0.5rem 0rem 0rem;
-
+font-size: 14px;
 }
 
 .subLink a {

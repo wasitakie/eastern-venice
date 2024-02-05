@@ -1,6 +1,6 @@
 <?php //include '../coon/config.php' 
 session_start();
-echo "session : " . $_SESSION["idOrder"];
+//echo "session : " . $_SESSION["idOrder"];
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +27,7 @@ echo "session : " . $_SESSION["idOrder"];
 <body>
     <?php include  '../bannner/banner.php' ?>
 
-    <?php include 'slide.php'; ?>
+
 
     <div class="container-fluid" style="padding-left: 0px;">
         <div class="row">
@@ -35,7 +35,8 @@ echo "session : " . $_SESSION["idOrder"];
                 <?php include '../menu/menu.php'; ?>
             </div>
             <div class="col-md-10 col-lg-9 col-xl-10">
-                <div class="col-md-12">
+                <div class="col-md-12 ">
+                    <?php include 'slide.php'; ?>
                     <div class="textTitle">
                         เราเป็นผู้นำเข้าของ Premium จัดทำ จัดหา และออกแบบ สินค้าพรีเมี่ยม และ Premium gift ทุกชนิดตาม
                         ที่ท่านต้องการ ของพรีเมี่ยมของเรามีให้ท่านเลือกหลากหลายตามเทศกาลและความต้องการ เช่น เสื้อยืด
@@ -47,7 +48,7 @@ echo "session : " . $_SESSION["idOrder"];
                         อีกมากมาย
                     </div>
 
-                    <div class="h3">สินค้าขายดี</div>
+                    <div class="h3" id="topofpage">สินค้าขายดี</div>
                     <hr>
                     <?php include 'productList.php'; ?>
                 </div>

@@ -1,10 +1,24 @@
+.headMenu {
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: #C0EBFD;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+    margin-bottom: 1rem;
+}
+
 .mainMenu {
     display: block;
     width: 100%;
     height: auto;
-    background-color: #76b6f6;
-    padding: 1rem 0rem;
+    background-color: #E5F8FE;
+    padding-bottom: 1rem;
     border-radius: 0.5rem;
+    font-size: 14px;
 }
 
 .mainMenu ul {
@@ -23,7 +37,7 @@
     width: 100%;
     height: auto;
     text-decoration: none;
-    color: rgb(52, 49, 49);
+    color:  #111;
     padding: 0.5rem 1rem;
 }
 
@@ -32,9 +46,9 @@
     width: 100%;
     height: auto;
     text-decoration: none;
-    color: rgb(52, 49, 49);
+    color: #111;
     padding: 0.5rem 1rem;
-    background-color: #296EB4 ;
+    background-color: #C0EBFD;
 }
 
 .mainMenu ul li ul li {

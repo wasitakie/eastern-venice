@@ -33,12 +33,11 @@ echo "session : " . session_id();
 
     <div class="container-fluid" style="padding-left: 0px;">
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-2 col-lg-3 col-xl-2">
                 <?php include '../menu/menu.php'; ?>
             </div>
-            <div class="col-md-10">
-                <div class="col-md-12">
-
+            <div class="col-md-10 col-lg-9 col-xl-10">
+                <div class="col-md-12 bigBox">
                     <div class="h3">แจ้งการโอนเงิน</div>
                     <hr>
                     <div class="mainConfirm">
@@ -72,7 +71,7 @@ echo "session : " . session_id();
                                 </div>
                                 <div class="col-md-6">
                                     <label for="inputCity" class="form-label">วันที่โอน</label>
-                                    <input type="text" class="form-control" id="inputCity">
+                                    <input type="month" class="form-control" id="inputCity">
                                 </div>
                                 <div class="col-md-4">
                                     <label for="inputState" class="form-label">State</label>
@@ -90,12 +89,12 @@ echo "session : " . session_id();
                                     <input class="form-control" type="file" id="formFile">
                                 </div>
                                 <div class="col-12">
-                                    <div class="form-check">
-                                        <label class="form-check-label" for="gridCheck">
-                                            Check me out
-                                        </label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                    </div>
+
+                                    <label class="form-check-label" for="gridCheck">
+                                        หมายเหตุ
+                                    </label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
                                 </div>
                                 <div class="col-12">
                                     <button type="submit" class="btn btn-primary">แจ้งชำระเงิน</button>

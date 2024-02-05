@@ -2,13 +2,14 @@
     display: block;
     width: auto;
     height: auto;
-    border: 3px solid #296EB4 ;;
     padding: 1rem;
     border-radius: 0.5rem;
 }
 
+
+
 .boxText{
-    padding: 2rem;
+    
 }
 
 
