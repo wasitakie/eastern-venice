@@ -31,7 +31,7 @@ session_start();
 
     <div class="container-fluid" style="padding-left: 0px;">
         <div class="row">
-            <div class="col-md-2 col-lg-3 col-xl-2">
+            <div class="col-md-2 col-lg-3 col-xl-2" id="topofmenu">
                 <?php include '../menu/menu.php'; ?>
             </div>
             <div class="col-md-10 col-lg-9 col-xl-10">
