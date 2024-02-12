@@ -27,14 +27,12 @@ session_start();
 <body>
     <?php include  '../bannner/banner.php' ?>
 
-
-
     <div class="container-fluid" style="padding-left: 0px;">
         <div class="row">
             <div class="col-md-2 col-lg-3 col-xl-2" id="topofmenu">
                 <?php include '../menu/menu.php'; ?>
             </div>
-            <div class="col-md-10 col-lg-9 col-xl-10">
+            <div class="col-md-10 col-lg-9 col-xl-10 " id="topofmenuPd">
                 <div class="col-md-12 ">
                     <?php include 'slide.php'; ?>
                     <div class="textTitle">
@@ -55,7 +53,7 @@ session_start();
             </div>
         </div>
     </div>
-
+    <?php include '../title-footer/footer.php'; ?>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="../slick/slick/slick.min.js"></script>
     <script>

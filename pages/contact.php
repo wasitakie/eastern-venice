@@ -1,6 +1,6 @@
 <?php //include '../coon/config.php' 
 session_start();
-echo "session : " . session_id();
+// echo "session : " . session_id();
 ?>
 
 <!DOCTYPE html>
@@ -31,13 +31,13 @@ echo "session : " . session_id();
 
     <div class="container-fluid" style="padding-left: 0px;">
         <div class="row">
-            <div class="col-md-2 col-lg-3 col-xl-2">
+            <div class="col-md-2 col-lg-3 col-xl-2" id="topofmenu">
                 <?php include '../menu/menu.php'; ?>
             </div>
-            <div class="col-md-10 col-lg-9 col-xl-10">
+            <div class="col-md-10 col-lg-9 col-xl-10" id="topofmenuPd">
                 <div class="col-md-12 bigBox">
 
-                    <div class="h3">ติดต่อกับเรา</div>
+                    <div class="h3">ติดต่อเรา</div>
                     <hr>
                     <div class="row">
                         <div class="col-md-6">
@@ -85,6 +85,25 @@ echo "session : " . session_id();
                         </div>
                         <div class="col-md-6">
                             <h3>ติดต่อเรา</h3>
+                            <div class="mainContact">
+                                <div class="icon">
+                                    <i class="fa-solid fa-mobile-screen-button"></i>
+                                </div>
+                                <div class="mainText">
+                                    <h3>เบอร์โทรศัพท์</h3>
+                                    <p>02-404-0650</p>
+                                </div>
+                            </div>
+                            <div class="mainContact">
+                                <div class="icon">
+                                    <i class="fa-solid fa-mobile-screen-button"></i>
+                                </div>
+                                <div class="mainText">
+                                    <h3>e-mail</h3>
+                                    <p>wanwalee@eastern-venice.com</p>
+                                    <p>theerathon@eastern-venice.com</p>
+                                </div>
+                            </div>
                         </div>
 
                     </div>

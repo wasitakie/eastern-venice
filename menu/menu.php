@@ -3,6 +3,7 @@
         <h4><i class="fa-solid fa-layer-group"></i> หมวดหมู่สินค้า</h4>
     </div>
     <ul>
+        <li><a href="">Hot item</a></li>
         <?php
         include '../menu/myClassMenu.php';
         $objMenu = new MyClassMenu;

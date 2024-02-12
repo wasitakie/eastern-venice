@@ -1,6 +1,6 @@
 <?php //include '../coon/config.php' 
 session_start();
-echo "session : " . session_id();
+// echo "session : " . session_id();
 ?>
 
 <!DOCTYPE html>

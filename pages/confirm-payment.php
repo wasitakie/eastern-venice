@@ -1,6 +1,6 @@
 <?php //include '../coon/config.php' 
 session_start();
-echo "session : " . session_id();
+// echo "session : " . session_id();
 ?>
 
 <!DOCTYPE html>
@@ -33,10 +33,10 @@ echo "session : " . session_id();
 
     <div class="container-fluid" style="padding-left: 0px;">
         <div class="row">
-            <div class="col-md-2 col-lg-3 col-xl-2">
+            <div class="col-md-2 col-lg-3 col-xl-2" id="topofmenu">
                 <?php include '../menu/menu.php'; ?>
             </div>
-            <div class="col-md-10 col-lg-9 col-xl-10">
+            <div class="col-md-10 col-lg-9 col-xl-10" id="topofmenuPd">
                 <div class="col-md-12 bigBox">
                     <div class="h3">แจ้งการโอนเงิน</div>
                     <hr>
