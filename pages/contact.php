@@ -96,12 +96,12 @@ session_start();
                             </div>
                             <div class="mainContact">
                                 <div class="icon">
-                                    <i class="fa-solid fa-mobile-screen-button"></i>
+                                    <i class="fa-regular fa-envelope"></i>
                                 </div>
                                 <div class="mainText">
                                     <h3>e-mail</h3>
-                                    <p>wanwalee@eastern-venice.com</p>
-                                    <p>theerathon@eastern-venice.com</p>
+                                    <p>wanwalee@eastern-venice.com <br>
+                                        theerathon@eastern-venice.com</p>
                                 </div>
                             </div>
                         </div>
