@@ -7,11 +7,8 @@
                 </div>
                 <div class="card-body">
                     <h4 class="card-title">Mini Air Purifier</h4>
-                    <p class="card-text"><b>รหัสสินค้า :</b> IT097 <br> <b>รายละเอียด : </b>
-                        Portable Air
-                        Purifier
-                        เครื่องฟอกอากาศสำหรัยรถยนต์ กรองฝุ่น PM 2.5 ดับกลิ่นอับ ควันบุหรี่
-                        เสียงเงียบ ใช้ไฟ USB <br>
+                    <p class="card-text"><b>รหัสสินค้า :</b> IT097 <br>
+
                     <p>
                         <a class="btn btnCard" href="slideProduct.php" role="button"><i class="fa-solid fa-cart-plus"></i> เลือกสินค้า</a>
                     </p>
@@ -26,11 +23,8 @@
                 </div>
                 <div class="card-body">
                     <h4 class="card-title">Mini Air Purifier</h4>
-                    <p class="card-text"><b>รหัสสินค้า :</b> IT097 <br> <b>รายละเอียด : </b>
-                        Portable Air
-                        Purifier
-                        เครื่องฟอกอากาศสำหรัยรถยนต์ กรองฝุ่น PM 2.5 ดับกลิ่นอับ ควันบุหรี่
-                        เสียงเงียบ ใช้ไฟ USB <br>
+                    <p class="card-text"><b>รหัสสินค้า :</b> IT097 <br>
+
                     <p>
                         <button type="button" class="btnCard"><i class="fa-solid fa-cart-plus"></i>
                             เลือกสินค้า</button>
@@ -46,11 +40,8 @@
                 </div>
                 <div class="card-body">
                     <h4 class="card-title">Mini Air Purifier</h4>
-                    <p class="card-text"><b>รหัสสินค้า :</b> IT097 <br> <b>รายละเอียด : </b>
-                        Portable Air
-                        Purifier
-                        เครื่องฟอกอากาศสำหรัยรถยนต์ กรองฝุ่น PM 2.5 ดับกลิ่นอับ ควันบุหรี่
-                        เสียงเงียบ ใช้ไฟ USB <br>
+                    <p class="card-text"><b>รหัสสินค้า :</b> IT097 <br>
+
                     <p>
                         <button type="button" class="btnCard"><i class="fa-solid fa-cart-plus"></i>
                             เลือกสินค้า</button>
@@ -66,11 +57,8 @@
                 </div>
                 <div class="card-body">
                     <h4 class="card-title">Mini Air Purifier</h4>
-                    <p class="card-text"><b>รหัสสินค้า :</b> IT097 <br> <b>รายละเอียด : </b>
-                        Portable Air
-                        Purifier
-                        เครื่องฟอกอากาศสำหรัยรถยนต์ กรองฝุ่น PM 2.5 ดับกลิ่นอับ ควันบุหรี่
-                        เสียงเงียบ ใช้ไฟ USB <br>
+                    <p class="card-text"><b>รหัสสินค้า :</b> IT097 <br>
+
                     <p>
                         <button type="button" class="btnCard"><i class="fa-solid fa-cart-plus"></i>
                             เลือกสินค้า</button>
@@ -86,11 +74,8 @@
                 </div>
                 <div class="card-body">
                     <h4 class="card-title">Mini Air Purifier</h4>
-                    <p class="card-text"><b>รหัสสินค้า :</b> IT097 <br> <b>รายละเอียด : </b>
-                        Portable Air
-                        Purifier
-                        เครื่องฟอกอากาศสำหรัยรถยนต์ กรองฝุ่น PM 2.5 ดับกลิ่นอับ ควันบุหรี่
-                        เสียงเงียบ ใช้ไฟ USB <br>
+                    <p class="card-text"><b>รหัสสินค้า :</b> IT097 <br>
+
                     <p>
                         <button type="button" class="btnCard"><i class="fa-solid fa-cart-plus"></i>
                             เลือกสินค้า</button>
@@ -106,11 +91,8 @@
                 </div>
                 <div class="card-body">
                     <h4 class="card-title">Mini Air Purifier</h4>
-                    <p class="card-text"><b>รหัสสินค้า :</b> IT097 <br> <b>รายละเอียด : </b>
-                        Portable Air
-                        Purifier
-                        เครื่องฟอกอากาศสำหรัยรถยนต์ กรองฝุ่น PM 2.5 ดับกลิ่นอับ ควันบุหรี่
-                        เสียงเงียบ ใช้ไฟ USB <br>
+                    <p class="card-text"><b>รหัสสินค้า :</b> IT097 <br>
+
                     <p>
                         <button type="button" class="btnCard"><i class="fa-solid fa-cart-plus"></i>
                             เลือกสินค้า</button>
@@ -126,11 +108,8 @@
                 </div>
                 <div class="card-body">
                     <h4 class="card-title">Mini Air Purifier</h4>
-                    <p class="card-text"><b>รหัสสินค้า :</b> IT097 <br> <b>รายละเอียด : </b>
-                        Portable Air
-                        Purifier
-                        เครื่องฟอกอากาศสำหรัยรถยนต์ กรองฝุ่น PM 2.5 ดับกลิ่นอับ ควันบุหรี่
-                        เสียงเงียบ ใช้ไฟ USB <br>
+                    <p class="card-text"><b>รหัสสินค้า :</b> IT097 <br>
+
                     <p>
                         <button type="button" class="btnCard"><i class="fa-solid fa-cart-plus"></i>
                             เลือกสินค้า</button>

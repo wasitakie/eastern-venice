@@ -22,7 +22,7 @@
     <div class="menuTop">
         <ul class="ul1">
             <li class="li1"><a href="../pages/index.php"><i class="fa-solid fa-house"></i> HOME</a></li>
-            <li class="li1D"><a href=""><i class="fa-solid fa-house"></i> kkkkk</a>
+            <li class="li1D"><a href=""><i class="fa-solid fa-layer-group"></i> PRODUCTS</a>
                 <ul class="ul2">
                     <?php
                     include 'myClassMenuTop.php';
