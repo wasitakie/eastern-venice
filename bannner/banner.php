@@ -10,6 +10,7 @@
                 T/F 02-404-0650
             </p>
         </div>
+        /* หนูทำค้นหาสินค้า อยู่หน้า pages/search ค่ะ */
         <form action="search.php" method="get">
             <input type="text" name="q" class="searchBer" placeholder="ค้นหาสินค้า" value="<?= $_GET["q"] ?>">
             <input type="image" class="iconSearch" src="../images/banner/icons8-search-50.png" alt="Submit" width="25" height="25" id="searchIcon">
