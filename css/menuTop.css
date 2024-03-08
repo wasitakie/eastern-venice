@@ -7,21 +7,19 @@
 }
 
 
-.menuBkTop ul.ul1  {
+.menuBkTop .ul1  {
     list-style: none;
     text-align: center;
-    top: 0;
-    position: relative;
     
 }
-.menuBkTop ul.ul1 li{
+.menuBkTop .ul1 .li1{
     display: inline-block;
     width: auto;
     height: 30px;
     top: 0;
     position: relative;
 }
-.menuBkTop ul.ul1 li a{
+.menuBkTop .ul1 .li1 a{
     display: inline-block   ;
     width: auto;
     height: 30px;
@@ -33,7 +31,7 @@
     position: relative  ;
 
 }
-.menuBkTop .menuTop  li a:hover{
+.menuBkTop .menuTop .li1 a:hover{
     display: inline-block;
     width: 100%;
     height: 30px;
@@ -48,109 +46,86 @@
     
 }
 
-
-
-
-
-.menuBkTop ul.ul1 li.li1D ul.ul2{
-    position: absolute;
-    background-color: #4B3107;
-    display: none;
-    z-index: 999;
-    width: 300px;
-   
-    
-    
-}
-
-.menuBkTop  ul.ul1 li.li1D ul.ul2 li{
-    width: 100%;
-    height: auto;
-    display: block;
-    position:relative;
-    text-align: left;
-    margin-left: -1.9rem;
-}
-
-
-.menuBkTop ul.ul1 li.li1D:hover ul.ul2 {
-    display: block;
-    position: absolute;
-    
-    margin-right: -1.5rem; 
-    
-}
-.menuBkTop ul.ul1 li.li1D ul.ul2 li.li2 a {
-
-    width: 298px;
-    height: auto;
-    left: 0;
-    border-radius: 0rem;
-    
-}
-
-.menuBkTop ul.ul1 li.li1D ul.ul2 li.li2 ul.ul3 {
-    position: absolute;
-    top:0px;
-    bottom: auto;
-    display: none;
-    width: 100%;
-    height: auto;
-    visibility: visible;
-    
-    
-}
-.menuBkTop ul.ul1 li.li1D ul.ul2 li.li2:hover ul.ul3 {
-    display: block;
+.ul2 , .ul3{
+    list-style: none;
     position: relative;
-    height: auto;
-    width: 100%;
-    
-}
-
-.menuBkTop ul.ul1 li.li1D ul.ul2 li.li2 ul.ul3 li {
-    position: relative;
-    display: block;
-    
-}
-
-
-
-/* ------------------ */
-/* .menuBkTop ul li ul    {
-    position: absolute;
-    visibility: hidden;
-    z-index: 1;
-}
-
-
-
-.menuBkTop ul li ul li {
-    position:relative;
-    visibility: visible;
-    display: block;
-    z-index: 9999;
-    background-color: rgb(189, 193, 191);
-    width: 350px;
     text-align: start;
-    margin-left: -1rem;
+    left: 0;
     
 }
 
-.menuBkTop ul li:hover ul  {
+.li2 {
+    position: relative;
+    margin-left: -1.9rem;
+    left: 0; 
+}
+
+.ul1 .li1 .ul2 .li2 .ul3 .li3 a{
+    position: relative;
+    margin-left: -1.9rem;
+    left: 0;
+    padding-left: 1rem;
+    width: 100%;
+    height: 30px;
+}
+
+.ul1 .li1 .ul2 .li2 .ul3 .li3 a:hover{
+    position: relative;
+    margin-left: -1.9rem;
+    left: 0;
+    padding-left: 1rem;
+    width: 114%;
+    background-color: #75583c;
+}
+
+
+.ul1 .li1 .ul2 .li2 a {
+    display: block;
+    font-size: 14px;
+    border-radius: 0;
+}
+
+.ul1 .li1 .ul2 .li2 a:hover {
+    display: block;
+    font-size: 14px;
+    background-color: #75583c !important;
+    border-radius: 0;
+}
+
+
+/* .menuBkTop .menuTop .ul1 .li1 .ul2 .li2 .ul3 .li3{
     position: absolute;
     visibility: hidden;
+}  */
+
+
+
+
+
+.menuBkTop .menuTop .ul1 .li1 .ul2{
+    position: absolute;
+    visibility: hidden;
+}
+.menuBkTop .menuTop .ul1 .li1:hover .ul2 {
+    position: absolute;
+    visibility:visible;
     display: block;
-    z-index: 9999;
-    margin-top: 2rem;
-    
+    width: 250px;
+    height: auto;   
+    padding-bottom: 1rem;
+    background-color: #4B3107;
+    z-index: 99999;
+    border-radius: 0rem 0rem 0.5rem 0.5rem;
 }
 
-.menuBkTop ul li ul li:hover {
-    display:block;
-    background-color: #810404;
-    
-} */
+
+.searchMenu{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
 
 
 

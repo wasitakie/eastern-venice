@@ -1,121 +1,39 @@
 <div class="productList">
     <div class="row">
-        <div class="col-md-3 col-lg-6 col-xl-3  my-3 ">
-            <div class="card border-secondary ">
-                <div class="cardImg">
-                    <img class="card-img-top" src="../images/product/71nvxu0DWVL._AC_SX679_.jpg" alt="Title" />
-                </div>
-                <div class="card-body">
-                    <h4 class="card-title">Mini Air Purifier</h4>
-                    <p class="card-text"><b>รหัสสินค้า :</b> IT097 <br>
+        <?php
 
-                    <p>
-                        <a class="btn btnCard" href="slideProduct.php" role="button"><i class="fa-solid fa-cart-plus"></i> เลือกสินค้า</a>
-                    </p>
+        include '../coon/config.php';
+        $hotItem = $coon->prepare("SELECT * FROM product_images WHERE product_hot = ?");
+        $hotItem->execute([1]);
+        while ($rowItem = $hotItem->fetch(PDO::FETCH_ASSOC)) {
+
+            $imgCount = explode("/", $rowItem["product_images_file"]);
+
+            $groupName = $coon->prepare(" SELECT * FROM group_product_sub WHERE sub_type_id = ?");
+            $groupName->execute([$rowItem["product_sub_id"]]);
+            $rowGroupName = $groupName->fetch(PDO::FETCH_ASSOC);
+
+            $rowGroupName["sub_group_id"];
+
+        ?>
+            <div class="col-md-3 col-lg-6 col-xl-3  my-3 ">
+
+                <div class="card borderColor">
+                    <a href="slideProduct.php?id=<?= $rowItem["product_images_id"] ?>&name=<?= $rowGroupName["sub_type_product"]; ?>&name1=<?= $rowItem["product_images_name"] ?>&group=<?= $_GET["id"] ?>&main=<?= $rowGroupName["sub_group_id"] ?>" class="tagA">
+                        <div class="cardImg">
+                            <img class="card-img-top" src="../images/product/<?= $imgCount[0] ?>" alt="Title" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $rowItem["product_images_name"] ?></h5>
+                            <p class="card-text"><b>รหัสสินค้า :</b> <?= $rowItem["product_images_num"] ?> <br>
+                        </div>
+                    </a>
                 </div>
             </div>
-        </div>
+        <?php
+        }
+        ?>
 
-        <div class="col-md-3 col-lg-6 col-xl-3  my-3 ">
-            <div class="card border-secondary ">
-                <div class="cardImg">
-                    <img class="card-img-top" src="../images/product/71nvxu0DWVL._AC_SX679_.jpg" alt="Title" />
-                </div>
-                <div class="card-body">
-                    <h4 class="card-title">Mini Air Purifier</h4>
-                    <p class="card-text"><b>รหัสสินค้า :</b> IT097 <br>
 
-                    <p>
-                        <button type="button" class="btnCard"><i class="fa-solid fa-cart-plus"></i>
-                            เลือกสินค้า</button>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-lg-6 col-xl-3  my-3 ">
-            <div class="card border-secondary ">
-                <div class="cardImg">
-                    <img class="card-img-top" src="../images/product/71nvxu0DWVL._AC_SX679_.jpg" alt="Title" />
-                </div>
-                <div class="card-body">
-                    <h4 class="card-title">Mini Air Purifier</h4>
-                    <p class="card-text"><b>รหัสสินค้า :</b> IT097 <br>
-
-                    <p>
-                        <button type="button" class="btnCard"><i class="fa-solid fa-cart-plus"></i>
-                            เลือกสินค้า</button>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-lg-6 col-xl-3  my-3 ">
-            <div class="card border-secondary ">
-                <div class="cardImg">
-                    <img class="card-img-top" src="../images/product/71nvxu0DWVL._AC_SX679_.jpg" alt="Title" />
-                </div>
-                <div class="card-body">
-                    <h4 class="card-title">Mini Air Purifier</h4>
-                    <p class="card-text"><b>รหัสสินค้า :</b> IT097 <br>
-
-                    <p>
-                        <button type="button" class="btnCard"><i class="fa-solid fa-cart-plus"></i>
-                            เลือกสินค้า</button>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-lg-6 col-xl-3  my-3 ">
-            <div class="card border-secondary ">
-                <div class="cardImg">
-                    <img class="card-img-top" src="../images/product/71nvxu0DWVL._AC_SX679_.jpg" alt="Title" />
-                </div>
-                <div class="card-body">
-                    <h4 class="card-title">Mini Air Purifier</h4>
-                    <p class="card-text"><b>รหัสสินค้า :</b> IT097 <br>
-
-                    <p>
-                        <button type="button" class="btnCard"><i class="fa-solid fa-cart-plus"></i>
-                            เลือกสินค้า</button>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-lg-6 col-xl-3  my-3 ">
-            <div class="card border-secondary ">
-                <div class="cardImg">
-                    <img class="card-img-top" src="../images/product/71nvxu0DWVL._AC_SX679_.jpg" alt="Title" />
-                </div>
-                <div class="card-body">
-                    <h4 class="card-title">Mini Air Purifier</h4>
-                    <p class="card-text"><b>รหัสสินค้า :</b> IT097 <br>
-
-                    <p>
-                        <button type="button" class="btnCard"><i class="fa-solid fa-cart-plus"></i>
-                            เลือกสินค้า</button>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-lg-6 col-xl-3  my-3 ">
-            <div class="card border-secondary ">
-                <div class="cardImg">
-                    <img class="card-img-top" src="../images/product/71nvxu0DWVL._AC_SX679_.jpg" alt="Title" />
-                </div>
-                <div class="card-body">
-                    <h4 class="card-title">Mini Air Purifier</h4>
-                    <p class="card-text"><b>รหัสสินค้า :</b> IT097 <br>
-
-                    <p>
-                        <button type="button" class="btnCard"><i class="fa-solid fa-cart-plus"></i>
-                            เลือกสินค้า</button>
-                    </p>
-                </div>
-            </div>
-        </div>
     </div>
 </div>

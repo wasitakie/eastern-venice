@@ -23,7 +23,7 @@ session_start();
     <link rel="stylesheet" href="../css/how-to-order.css">
     <link rel="stylesheet" href="../css/menu.css">
     <link rel="stylesheet" href="../css/slide.css">
-    <title>easten</title>
+    <title><?php include '../title-footer/title.php' ?></title>
 </head>
 
 <body>

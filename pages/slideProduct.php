@@ -1,6 +1,9 @@
 <?php //include '../coon/config.php' 
 session_start();
-// echo "session : " . session_id();
+include '../coon/config.php';
+$dk = $coon->prepare(" SELECT * FROM product_images WHERE product_images_id = ?");
+$dk->execute([$_GET["id"]]);
+$row = $dk->fetch(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -8,8 +11,8 @@ session_start();
 
 <head>
     <meta charset="UTF-8">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    <meta name="keywords" content="<?= $row["product_images_keyword"] ?>">
+    <meta name="description" content="<?= $row["product_images_description"] ?>">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -21,7 +24,7 @@ session_start();
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/menu.css">
     <link rel="stylesheet" href="../css/slide.css">
-    <title>easten</title>
+    <title><?php include '../title-footer/title.php' ?></title>
     <style>
 
     </style>
@@ -29,71 +32,88 @@ session_start();
 
 <body>
     <?php include  '../bannner/banner.php' ?>
+    <?php
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 ">
-                <div class="container">
-                    <div class="col-md-12 slideProductMain">
-                        <div class="slider-for">
-                            <div class="slideProduct1"><img src="https://www.abcthebaby.com/wp-content/uploads/2023/05/Air-Purifier-Portable-01.webp" alt="" srcset="">
+    $slide = $coon->prepare(" SELECT* FROM product_images WHERE product_images_id =? ");
+    $slide->execute([$_GET["id"]]);
+    while ($rowSlide = $slide->fetch(PDO::FETCH_ASSOC)) {
+
+
+    ?>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 ">
+                    <div class="container">
+                        <div class="col-md-12 slideProductMain">
+                            <div class="slider-for">
+                                <?php
+                                $imagesCount = count(explode("/", $rowSlide["product_images_file"]));
+                                $imagesList = explode("/", $rowSlide["product_images_file"]);
+                                for ($i = 0; $i <= $imagesCount - 1; $i++) {
+                                    list($width, $height) = getimagesize("../images/product/" . $imagesList[$i]);
+                                    $v = array('h' => $height, 'w' => $width);
+                                    if ($v['w'] > $v['h']) {
+                                        $sizeWh = 'width="100%"';
+                                    } else {
+                                        $sizeWh = 'height="100%"';
+                                    }
+                                ?>
+                                    <div class="slideProduct1"><img src="../images/product/<?= $imagesList[$i] ?>" alt="" srcset="" <?= $sizeWh ?>></div>
+                                <?php
+                                }
+                                ?>
                             </div>
-                            <div class="slideProduct1"><img src="https://down-th.img.susercontent.com/file/th-11134207-7r98o-lnwiqgkh1euf76" alt="" srcset="">
-                            </div>
-                            <div class="slideProduct1"><img src="https://down-th.img.susercontent.com/file/th-11134207-7r990-lqtyrh909144af" alt="" srcset="">
-                            </div>
-                            <div class="slideProduct1"><img src="https://down-th.img.susercontent.com/file/th-11134207-7r98p-lqtyrh8zcqai17" alt="" srcset="">
+
+                        </div>
+                        <div class="col-md-12 slideProductSub">
+                            <div class="slider-nav">
+                                <?php
+                                include '../menu/myClassMenu.php';
+                                $objName = new MyClassMenu;
+                                $imagesCount = count(explode("/", $rowSlide["product_images_file"]));
+                                $imagesList = explode("/", $rowSlide["product_images_file"]);
+                                for ($i = 0; $i <= $imagesCount - 1; $i++) {
+                                ?>
+                                    <div class="slideProduct2"><img src="../images/product/<?= $imagesList[$i] ?>" alt="" srcset="" width="20%"></div>
+                                <?php
+                                }
+                                ?>
                             </div>
                         </div>
-
-                    </div>
-                    <div class="col-md-12 slideProductSub">
-                        <div class="slider-nav">
-                            <div class="slideProduct2"><img src="https://www.abcthebaby.com/wp-content/uploads/2023/05/Air-Purifier-Portable-01.webp" alt="" srcset="" width="20%">
-                            </div>
-                            <div class="slideProduct2"><img src="https://down-th.img.susercontent.com/file/th-11134207-7r98o-lnwiqgkh1euf76" alt="" srcset="" width="20%">
-                            </div>
-                            <div class="slideProduct2"><img src="https://down-th.img.susercontent.com/file/th-11134207-7r990-lqtyrh909144af" alt="" srcset="" width="20%">
-                            </div>
-                            <div class="slideProduct2"><img src="https://down-th.img.susercontent.com/file/th-11134207-7r98p-lqtyrh8zcqai17" alt="" srcset="" width="20%">
-                            </div>
-                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="subLink">
-                    <a href="../pages/index.php">หน้าหลัก/</a>
-                    <a href="../pages/index.php">สินค้าขายดี/</a>
-                    <a href="">ชื่อสินค้า</a>
+                <div class="col-md-6">
+                    <div class="subLink">
+                        <a href="../pages/index.php">หน้าหลัก/</a>
+                        <a href="../pages/productGroup.php?id=<?= $_GET["main"] ?>&name= <?= $objName->groupName($_GET["main"]) ?>"><?= $objName->groupName($_GET["main"]) ?>/</a>
+                        <a href="../pages/productSub.php?id=<?= $objName->backGroup($rowSlide["product_sub_id"]) ?>&name=<?= $_GET["name"] ?>&group=<?= $_GET["main"] ?>"><?= $_GET["name"] ?>/</a>
+                        <a href="#"><?= $rowSlide["product_images_name"] ?></a>
+                    </div>
+                    <h1><?= $rowSlide["product_images_name"] ?></h1>
+                    <hr>
+                    <p class="card-text"><b>รหัสสินค้า :</b> <?= $rowSlide["product_images_num"] ?> <br> <b>รายละเอียด : </b>
+                        <?= strip_tags($rowSlide["product_images_detail"]) ?><br> </p>
+                    <p>
+                    <div class="">
+                        <!-- <form class="d-flex">
+                            <div class="col">
+                                <div class="mb-3 d-flex align-items-md-center  ">
+                                    <i class="fa-solid fa-circle-minus" onclick="incrementValueD()"></i> &nbsp; <input type="text" name="numProduct" id="total-count" class="form-control w-25 number_only text-center " value="1"> &nbsp; <i class="fa-solid fa-circle-plus" onclick="incrementValue()"></i>
 
+                                </div>
+                                <hr> <button type="button" class="btnCard"><i class="fa-solid fa-cart-plus"></i>
+                                    หยิบสินค้าใส่ตะกร้า</button>
+                        </form> -->
+
+                    </div>
+
+                    </p>
                 </div>
-                <h1>Mini Air Purifier</h1>
-                <hr>
-                <p class="card-text"><b>รหัสสินค้า :</b> IT097 <br> <b>รายละเอียด : </b>
-                    Portable Air
-                    Purifier
-                    เครื่องฟอกอากาศสำหรัยรถยนต์ กรองฝุ่น PM 2.5 ดับกลิ่นอับ ควันบุหรี่
-                    เสียงเงียบ ใช้ไฟ USB <br> <b>ราคา : </b> <span>1,400</span> บาท</p>
-                <p>
-                <div class="">
-                    <form class="d-flex">
-                        <div class="col">
-                            <div class="mb-3 d-flex align-items-md-center  ">
-                                <i class="fa-solid fa-circle-minus" onclick="incrementValueD()"></i> &nbsp; <input type="text" name="numProduct" id="total-count" class="form-control w-25 number_only text-center " value="1"> &nbsp; <i class="fa-solid fa-circle-plus" onclick="incrementValue()"></i>
-
-                            </div>
-                            <hr> <button type="button" class="btnCard"><i class="fa-solid fa-cart-plus"></i>
-                                หยิบสินค้าใส่ตะกร้า</button>
-                    </form>
-
-                </div>
-
-                </p>
             </div>
         </div>
-    </div>
-
+    <?php
+    }
+    ?>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="../slick/slick/slick.min.js"></script>
     <script>

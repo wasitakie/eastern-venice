@@ -1,4 +1,5 @@
-<?php //include '../coon/config.php' 
+<?php
+include '../coon/config.php';
 session_start();
 // echo "session : " . session_id();
 ?>
@@ -21,7 +22,7 @@ session_start();
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/menu.css">
     <link rel="stylesheet" href="../css/slide.css">
-    <title>easten</title>
+    <title><?php include '../title-footer/title.php' ?></title>
 </head>
 
 <body>
@@ -37,25 +38,16 @@ session_start();
             <div class="col-md-10 col-lg-9 col-xl-10" id="topofmenuPd">
                 <div class="col-md-12 bigBox">
 
+                    <?php
+                    $se = $coon->prepare("SELECT * FROM aboutus ");
+                    $se->execute();
+                    $row  = $se->fetch(PDO::FETCH_ASSOC)
+                    ?>
+
                     <div class="h3">เกี่ยวกับ ห้างหุ่นส่วนจำกัด อิสเทิน เวนิส (Eastern Venice Ltd., Part.)</div>
                     <hr>
                     <div class="mainAboutUs">
-                        <p>เราเป็นผู้นำเข้า จัดทำ จัดหา และออกแบบ สินค้าพรีเมี่ยมและสินค้าโปรโมชั่นทุกชนิดตามที่ท่านต้องการ สำหรับงาน<br>
-                            ส่งเสริมการขาย<br>
-                            โฆษณา ประชาสัมพันธ์<br>
-                            สร้างแบรนด์บริษัทของท่านให้เป็นที่รู้จักอย่างกว้างขวาง<br>
-                            โอกาสพิเศษต่างๆ<br>
-                            โดยเราเน้นสินค้าที่มีคุณภาพในราคาที่เหมาะสมสำหรับให้ลูกค้าของท่านเนื่องในโอกาสพิเศษต่างๆ พร้อมให้คำแนะนำและบริการจากทีมงานออกแบบและขายที่มีประสบการณ์<br>
-
-                            สินค้าของเรามีให้ท่านเลือกหลากหลายตามเทศกาลและความต้องการ เช่น เสื้อยืด เสื้อโปโล และเสื้อแจ็กเก็ต ซึ่งมีให้เลือกหลากหลายทั้งแบบ และเนื้อผ้า, กระเป๋าลดโลกร้อน, Flash Drive, ปากกาโลหะและพลาสติก, สินค้า PVC และเรซิ่นรูปแบบต่างๆ, แก้วมัคเซรามิค, กระบอกน้ำแบบต่างๆ, นาฬิกาข้อมือ และ นาฬิกาแขวนผนัง, พวงกุญแจโลหะ และสินค้าอื่นๆ อีกมากมาย<br>
-
-                            Eastern Venice หวังเป็นอย่างยิ่งว่า จะได้มีโอกาสรับใช้บริษัท หรือ องค์กรของท่าน และช่วยพัฒนาชื่อเสียงบริษัท หรือ องค์กรของท่านให้มีชื่อเสียงมากยิ่งขึ้น<br>
-
-                            <b>“ We serve you a wonderful gift & premium ”</b><br>
-
-                            หมายเลขผู้จดทะเบียน : 0103550012933<br>
-                            หมายเลขผู้เสียภาษี : 3 0326 0921 0
-                        </p>
+                        <?= $row["aboutus_detail"] ?>
                     </div>
 
                 </div>

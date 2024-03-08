@@ -15,6 +15,7 @@
   width: 100%;
   height: auto;
   background-color: #FF6C1D;
+  padding: 0.8rem 0.8rem 0.8rem 0rem;
 }
 
 .bannerFluid .logo {
@@ -147,7 +148,7 @@
 
 .mainContact .icon{
   text-align: center;
-  width: auto;
+  width: 90px;
   height: 90px;
   background-color: #f8d0ac;
   padding: 0.5rem 2rem ;
@@ -180,6 +181,29 @@
   margin-left: 0rem;
 }
 
+.tagA {
+  text-decoration: none;
+  color: unset;
+}
+
+.borderColor {
+  border: 1pt solid #cdcdcd;
+  border-radius: 0.5rem;
+}
+
+.slideImg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.slideImg img {
+  width: 100%;
+  height: auto;
+}
+
+
+
 @media only screen and (max-width: 600px) {
  #topofmenu {
   display: none;
@@ -188,7 +212,7 @@
 
  #topofmenuPd {
   display: block;
- padding-left:  1.5rem;
+  padding-left:  1.5rem;
 }
 
 }

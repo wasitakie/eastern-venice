@@ -21,7 +21,7 @@ session_start();
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/menu.css">
     <link rel="stylesheet" href="../css/slide.css">
-    <title>easten</title>
+    <title><?php include '../title-footer/title.php' ?></title>
 </head>
 
 <body>
@@ -35,18 +35,20 @@ session_start();
             <div class="col-md-10 col-lg-9 col-xl-10 " id="topofmenuPd">
                 <div class="col-md-12 ">
                     <?php include 'slide.php'; ?>
+
+                    <?php
+                    include '../coon/config.php';
+                    $dataTool1 = $_POST["dataTool1"];
+                    $editTool1 = $coon->prepare(" SELECT* FROM group_product WHERE group_type_id = ? ");
+                    $editTool1->execute([1]);
+                    $rowEditTool1 = $editTool1->fetch(PDO::FETCH_ASSOC)
+                    ?>
+
                     <div class="textTitle">
-                        เราเป็นผู้นำเข้าของ Premium จัดทำ จัดหา และออกแบบ สินค้าพรีเมี่ยม และ Premium gift ทุกชนิดตาม
-                        ที่ท่านต้องการ ของพรีเมี่ยมของเรามีให้ท่านเลือกหลากหลายตามเทศกาลและความต้องการ เช่น เสื้อยืด
-                        เสื้อโปโล และเสื้อแจ็กเก็ตพรีเมี่ยม ซึ่งมีให้เลือกหลากหลายทั้งแบบ และเนื้อผ้า,
-                        กระเป๋าผ้าพรีเมี่ยมลดโลกร้อน, Flash Drive หลากหลายแบบ, ปากกา พรีเมี่ยม โลหะและพลาสติก, สินค้า
-                        PVC และเรซิ่นรูปแบบต่างๆ, แก้วมัคเซรามิค, กระบอกน้ำพรีเมี่ยมแบบต่างๆ มีทั้งแบบเดี่ยว หรือ
-                        จัดเซ็ท, Organizer, สมุดโน๊ตพรีเมี่ยม, พวงกุญแจ, พัดลม, ไฟฉาย, นาฬิกาข้อมือ และ นาฬิกาแขวนผนัง,
-                        พวงกุญแจโลหะ, ม่านสูญญากาศพรีเมี่ยม และสินค้าอื่นๆ
-                        อีกมากมาย
+                        <?= $rowEditTool1["group_text"] ?>
                     </div>
 
-                    <div class="h3" id="topofpage">สินค้าขายดี</div>
+                    <div class="h3" id="topofpage">Hot item</div>
                     <hr>
                     <?php include 'productList.php'; ?>
                 </div>
