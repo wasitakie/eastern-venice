@@ -1,6 +1,10 @@
-<?php //include '../coon/config.php' 
+<?php
 session_start();
-//echo "session : " . $_SESSION["idOrder"];
+include '../coon/config.php';
+
+$home = $coon->prepare("SELECT * FROM home WHERE home_id = ?");
+$home->execute([1]);
+$rHome = $home->fetch(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -8,8 +12,8 @@ session_start();
 
 <head>
     <meta charset="UTF-8">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    <meta name="keywords" content="<?= $rHome["home_keyword"] ?>">
+    <meta name="description" content="<?= $rHome["home_description"] ?>">
     <link rel="icon" type="image/x-icon" href="../images/bkImg1.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -48,7 +52,7 @@ session_start();
                     ?>
 
                     <div class="textTitle" data-aos="flip-up" data-aos-delay="800">
-                        <?= $rowEditTool1["group_text"] ?>
+                        <?= $rHome["home_text"] ?>
                     </div>
                     <div class="searchMo">
                         <form action="search.php" method="get" class="formSearch">

@@ -50,7 +50,7 @@ $row = $key->fetch(PDO::FETCH_ASSOC);
                     $row  = $se->fetch(PDO::FETCH_ASSOC)
                     ?>
 
-                    <div class="h3" data-aos="fade-up" data-aos-delay="800">เกี่ยวกับ ห้างหุ่นส่วนจำกัด อิสเทิน เวนิส (Eastern Venice Ltd., Part.)
+                    <div class="h3" data-aos="fade-up" data-aos-delay="800"><b>เกี่ยวกับ ห้างหุ่นส่วนจำกัด อิสเทิน เวนิส (Eastern Venice Ltd., Part.)</b>
                         <hr>
                     </div>
 

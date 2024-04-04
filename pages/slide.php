@@ -7,7 +7,7 @@
         while ($rowSlide = $slide->fetch(PDO::FETCH_ASSOC)) {
         ?>
             <div class="slide">
-                <img src="../images/banner/<?= $rowSlide["slide_img"] ?>" width="100%" alt="" srcset="">
+                <img src="../images/banner/<?= $rowSlide["slide_img"] ?>" width="100%" alt="" srcset="" class="slideImgBk">
             </div>
         <?php
         }

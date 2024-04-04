@@ -7,7 +7,7 @@
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 0rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     width: 50%;
     border-radius: 1rem;
 }
@@ -17,6 +17,7 @@
     width: 40px;
     height: auto;
     margin-right: 4rem;
+    
 }
 
 .boxContact .imgContact img{
@@ -24,10 +25,44 @@
     height: auto;
 }
 
-
-.boxContact .detailContact {
+.detailContact {
     display: block;
     width: 100%;
-    height: auto;
-    margin-right: 4rem;
+}
+
+
+@media only screen and (max-width: 1023px) {
+    .boxContact {
+        display: flex;
+        justify-content: baseline;
+        justify-items: baseline;
+        border: 1pt solid #bbbbbb88;
+        padding-top: 0.8rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 0rem;
+        margin-top: 1rem;
+        width: 100%;
+        border-radius: 1rem;
+    }
+    
+    .boxContact .imgContact {
+        display: block;
+        width: 20px;
+        height: auto;
+        margin-right: 1rem;
+        
+    }
+    
+    .boxContact .imgContact img{
+        width: 100%;
+        height: auto;
+    }
+    
+    .detailContact {
+        display: block;
+        width: 100%;
+        word-wrap: break-word;
+    }
+
 }

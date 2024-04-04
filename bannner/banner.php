@@ -12,7 +12,7 @@
         </div>
         <div class="search">
             <div class="hotLine">
-                <h5>ติดต่อฝายขาย</h5>
+                <h5>ติดต่อฝ่ายขาย</h5>
                 <p>HOT-LINE : 083-651-9291
                     ,093-651-5197<br>
                     T/F 02-404-0650
@@ -36,7 +36,7 @@
             <ul class="ul1">
                 <li class=" li1"><a href="../pages/index.php"><i class="fa-solid fa-house"></i> HOME</a></li>
                 <li class="li1"><a href="../pages/index.php"><i class="fa-solid fa-fire"></i> HOT ITEM</a></li>
-                <li class="li1"><a href=""><i class="fa-solid fa-layer-group"></i> PRODUCTS</a>
+                <li class="li1"><a href="#" disabled="disabled"><i class="fa-solid fa-layer-group"></i> PRODUCTS</a>
                     <ul class="ul2">
                         <?php
                         include 'myClassMenuTop.php';
