@@ -12,10 +12,16 @@ include 'session/sessionAdmin.php';
     <a class="nav-link" href="aboutUs.php" style="margin-top: -1.5rem;">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>aboutUs </span></a>
+
+    <a class="nav-link" href="customer.php" style="margin-top: -1.5rem;">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>เพิ่ม Customer</span></a>
+    <a class="nav-link" href="logo.php" style="margin-top: -1.5rem;">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>เพิ่ม Logo</span></a>
     <a class="nav-link" href="slide.php" style="margin-top: -1.5rem;">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>เพิ่ม slide</span></a>
-
 
     <a class="nav-link" href="menuProduct.php" style="margin-top: -1.5rem;">
         <i class="fas fa-fw fa-tachometer-alt"></i>

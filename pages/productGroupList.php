@@ -1,4 +1,4 @@
-<div class="productList">
+<div class="productList" data-aos="fade-up" data-aos-delay="800">
     <div class="row">
         <?php
         include '../coon/config.php';
@@ -7,7 +7,7 @@
         while ($rowList = $groupList->fetch(PDO::FETCH_ASSOC)) {
 
         ?>
-            <div class="col-md-3 col-lg-6 col-xl-3  my-3 ">
+            <div class="col-md-4 col-lg-6 col-xl-3 col-sm-4  my-3 ">
                 <div class="card borderColor">
                     <a href="productSub.php?id=<?= $rowList["sub_type_id"] ?>&name=<?= $rowList["sub_type_product"] ?>&group=<?= $rowList["sub_group_id"] ?>" class="tagA">
                         <div class="cardImg">

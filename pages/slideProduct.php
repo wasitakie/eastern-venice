@@ -13,7 +13,7 @@ $row = $dk->fetch(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="keywords" content="<?= $row["product_images_keyword"] ?>">
     <meta name="description" content="<?= $row["product_images_description"] ?>">
-
+    <link rel="icon" type="image/x-icon" href="../images/bkImg1.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../boot/css/bootstrap.min.css">
@@ -24,6 +24,9 @@ $row = $dk->fetch(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/menu.css">
     <link rel="stylesheet" href="../css/slide.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title><?php include '../title-footer/title.php' ?></title>
     <style>
 
@@ -32,6 +35,7 @@ $row = $dk->fetch(PDO::FETCH_ASSOC);
 
 <body>
     <?php include  '../bannner/banner.php' ?>
+    <div class="spaeTop"></div>
     <?php
 
     $slide = $coon->prepare(" SELECT* FROM product_images WHERE product_images_id =? ");
@@ -42,7 +46,7 @@ $row = $dk->fetch(PDO::FETCH_ASSOC);
     ?>
         <div class="container">
             <div class="row">
-                <div class="col-md-6 ">
+                <div class="col-md-12 col-lg-6 col-xl-6 " style="margin-bottom: 2rem">
                     <div class="container">
                         <div class="col-md-12 slideProductMain">
                             <div class="slider-for">
@@ -52,11 +56,12 @@ $row = $dk->fetch(PDO::FETCH_ASSOC);
                                 for ($i = 0; $i <= $imagesCount - 1; $i++) {
                                     list($width, $height) = getimagesize("../images/product/" . $imagesList[$i]);
                                     $v = array('h' => $height, 'w' => $width);
-                                    if ($v['w'] > $v['h']) {
-                                        $sizeWh = 'width="100%"';
-                                    } else {
-                                        $sizeWh = 'height="100%"';
-                                    }
+                                    //     if ($v['w'] > $v['h']) {
+                                    //         $sizeWh = 'width="100%"';
+                                    //     } else {
+                                    //         $sizeWh = 'height="100%"';
+                                    //     }
+                                    // 
                                 ?>
                                     <div class="slideProduct1"><img src="../images/product/<?= $imagesList[$i] ?>" alt="" srcset="" <?= $sizeWh ?>></div>
                                 <?php
@@ -82,7 +87,7 @@ $row = $dk->fetch(PDO::FETCH_ASSOC);
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="800">
                     <div class="subLink">
                         <a href="../pages/index.php">หน้าหลัก/</a>
                         <a href="../pages/productGroup.php?id=<?= $_GET["main"] ?>&name= <?= $objName->groupName($_GET["main"]) ?>"><?= $objName->groupName($_GET["main"]) ?>/</a>
@@ -114,6 +119,8 @@ $row = $dk->fetch(PDO::FETCH_ASSOC);
     <?php
     }
     ?>
+
+    <?php include '../title-footer/footer.php'; ?>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="../slick/slick/slick.min.js"></script>
     <script>
@@ -160,6 +167,21 @@ $row = $dk->fetch(PDO::FETCH_ASSOC);
 
         $('.number_only').bind('keyup paste', function() {
             this.value = this.value.replace(/[^0-9]/g, '');
+        });
+
+        AOS.init();
+
+
+        $(document).ready(function() {
+            $('.bannerFluid .logo').css('width', 500);
+
+            $(window).bind('scroll', function() {
+                if ($(window).scrollTop() > 10) {
+                    $('.bannerFluid .logo').css('width', 400);
+                } else {
+                    $('.bannerFluid .logo').css('width', 500);
+                }
+            });
         });
     </script>
 </body>

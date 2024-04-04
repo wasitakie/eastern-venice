@@ -10460,6 +10460,32 @@ a:focus {
   z-index: 1;
 }
 
+.readAll {
+  display: block;
+  width: 100%;
+  height: auto;
+text-align: right;
+  
+}
+
+.back{
+  display: block;
+  width: 100%;
+  height: auto;
+  text-align: right;
+}
+
+.customerImg{
+  display: block;
+  width: 250px;
+  height: auto;
+  
+}
+
+.customerImg img {
+  width: 100%;
+  height: auto;
+}
 .sidebar .sidebar-brand .sidebar-brand-icon i {
   font-size: 2rem;
 }

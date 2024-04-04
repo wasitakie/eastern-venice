@@ -1,0 +1,97 @@
+.headMenu {
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: #296eb4;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.mainMenu {
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: #88d9fb;
+    padding-bottom: 1rem;
+    border-radius: 0.5rem;
+    font-size: 14px;
+}
+
+.mainMenu ul {
+    list-style: none;
+    margin-left: -2rem;
+}
+
+.mainMenu ul li {
+    display: block;
+    width: auto;
+    height: auto;
+}
+
+.mainMenu ul li a {
+    display: block;
+    width: 100%;
+    height: auto;
+    text-decoration: none;
+    color:  #111;
+    padding: 0.5rem 1rem;
+}
+
+.mainMenu ul li a:hover {
+    display: block;
+    width: 100%;
+    height: auto;
+    text-decoration: none;
+    color: #111;
+    padding: 0.5rem 1rem;
+    background-color: #C0EBFD;
+}
+
+.mainMenu ul li ul li {
+    visibility: hidden;
+    position: absolute;
+}
+
+.mainMenu ul li:hover ul li {
+    visibility: visible;
+    display: block;
+    position: relative;
+}
+
+.mainMenu ul li ul  {
+    visibility: visible;
+    display: block;
+    position: relative;
+    margin-left: -1rem;
+}
+
+
+.iconMenu {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    padding-right: 0.5rem;
+
+}
+.iconMenu a {
+    display: inline-block;
+    width: auto;
+    height: auto;
+
+}
+
+.iconMenu  .arrow {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    right: 0;
+    position: relative;
+    z-index: 99;
+}
+

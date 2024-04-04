@@ -10,7 +10,7 @@ include 'session/sessionAdmin.php';
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
 
 <?php
-include '../coon/config.php';
+
 
 if ($_GET["g"] == "editTool1") {
 
@@ -79,8 +79,39 @@ if ($_GET["g"] == "editTool2") {
 
 if ($_GET["g"] == "editTool3") {
 
-    if ($_FILES["fileImgProduct"]["name"][0] == "") {
-        $nameImgUse = $_POST["UpFileProduct"];
+
+
+    if (empty($_FILES["fileImgProduct"]["name"][0])) {
+        $up = $coon->prepare(" UPDATE product_images SET product_sub_id= ?,product_images_name= ?,product_images_num= ?,product_images_detail= ?,product_images_description= ?,product_images_keyword= ? WHERE product_images_id = ?");
+        $up->execute([$_POST["subProduct"], $_POST["nameProduct"], $_POST["numProduct"], $_POST["detailProduct"], $_POST["descriptionProduct"], $_POST["keywordProduct"], $_POST["upIdProduct"]]);
+
+        if ($up and $_GET["b"] == "p") {
+            echo '<script>
+            $(document).ready(function(){
+             Swal.fire({
+                 title: "บันทึกข้อมูล",
+                 text: "บันทึกข้อมูลเรียบร้อยแล้ว!",
+                 icon: "success",
+                 timer:1500,
+               }).then(function() {
+                 window.location.href = "listImgShow.php?id=' . $_POST["upIdProduct"] . '";
+             });
+            });
+             </script>';
+        } else if ($up and $_GET['b'] == "") {
+            echo '<script>
+             $(document).ready(function(){
+              Swal.fire({
+                  title: "บันทึกข้อมูล",
+                  text: "บันทึกข้อมูลเรียบร้อยแล้ว!",
+                  icon: "success",
+                  timer:1500,
+                }).then(function() {
+                  window.location.href = "menuProduct.php";
+              });
+             });
+              </script>';
+        }
     } else {
 
         echo $imgCount = count($_FILES["fileImgProduct"]["name"]);
@@ -105,26 +136,38 @@ if ($_GET["g"] == "editTool3") {
         }
 
         $nameImgUse = substr($nameImg, 0, -1);
-    }
 
-    $up = $coon->prepare(" UPDATE product_images SET product_sub_id= ?,product_images_name= ?,product_images_num= ?,product_images_detail= ?,product_images_file= ?,product_images_description= ?,product_images_keyword= ? WHERE product_images_id = ?");
-    $up->execute([$_POST["subProduct"], $_POST["nameProduct"], $_POST["numProduct"], $_POST["detailProduct"], $nameImgUse, $_POST["descriptionProduct"], $_POST["keywordProduct"], $_POST["upIdProduct"]]);
 
-    if ($up) {
-        echo '<script>
-       $(document).ready(function(){
-        Swal.fire({
-            title: "แก้ไขข้อมูล",
-            text: "แก้ไขข้อมูลเรียบร้อยแล้ว!",
-            icon: "success",
-            timer:1500,
-          }).then(function() {
-            window.location.href = "menuProduct.php";
-        });
-       });
-        </script>';
-    } else {
-        echo "no";
+        $up = $coon->prepare(" UPDATE product_images SET product_sub_id= ?,product_images_name= ?,product_images_num= ?,product_images_detail= ?,product_images_file= ?,product_images_description= ?,product_images_keyword= ? WHERE product_images_id = ?");
+        $up->execute([$_POST["subProduct"], $_POST["nameProduct"], $_POST["numProduct"], $_POST["detailProduct"], $nameImgUse, $_POST["descriptionProduct"], $_POST["keywordProduct"], $_POST["upIdProduct"]]);
+
+        if ($up and $_GET["b"] == "p") {
+            echo '<script>
+            $(document).ready(function(){
+             Swal.fire({
+                 title: "บันทึกข้อมูล",
+                 text: "บันทึกข้อมูลเรียบร้อยแล้ว!",
+                 icon: "success",
+                 timer:1500,
+               }).then(function() {
+                 window.location.href = "listImgShow.php?id=' . $_POST["upIdProduct"] . '";
+             });
+            });
+             </script>';
+        } else if ($up and $_GET['b'] == "") {
+            echo '<script>
+             $(document).ready(function(){
+              Swal.fire({
+                  title: "บันทึกข้อมูล",
+                  text: "บันทึกข้อมูลเรียบร้อยแล้ว!",
+                  icon: "success",
+                  timer:1500,
+                }).then(function() {
+                  window.location.href = "menuProduct.php";
+              });
+             });
+              </script>';
+        }
     }
 }
 
@@ -284,19 +327,42 @@ if ($_GET["g"] == "deleteSubMenu") {
 }
 
 if ($_GET["g"] == "deleteProductMenu") {
+    //echo $_GET["d"];
     $delete = $coon->prepare("DELETE FROM  product_images WHERE product_images_id =? ");
     $delete->execute([$_GET["id"]]);
-    if ($delete) {
-        header("location: menuProduct.php");
-    } else {
-        echo 'no';
+    if ($delete and $_GET["d"] == "d") {
+        echo '<script>
+        $(document).ready(function(){
+         Swal.fire({
+             title: "บันทึกข้อมูล",
+             text: "บันทึกข้อมูลเรียบร้อยแล้ว!",
+             icon: "success",
+             timer:1500,
+           }).then(function() {
+             window.location.href = "listImgShow.php?id=' . $_GET["id"] . '";
+         });
+        });
+         </script>';
+    } else if ($delete and $_GET['d'] == "") {
+        echo '<script>
+         $(document).ready(function(){
+          Swal.fire({
+              title: "บันทึกข้อมูล",
+              text: "บันทึกข้อมูลเรียบร้อยแล้ว!",
+              icon: "success",
+              timer:1500,
+            }).then(function() {
+              window.location.href = "menuProduct.php";
+          });
+         });
+          </script>';
     }
 }
 
 if ($_GET["g"] == "hotMenu") {
     $update = $coon->prepare("UPDATE product_images SET product_hot = ? WHERE product_images_id = ? ");
     $update->execute([$_GET["num"], $_GET["idUp"]]);
-    if ($update) {
+    if ($update and $_GET['p'] == "l") {
         echo '<script>
        $(document).ready(function(){
         Swal.fire({
@@ -305,10 +371,95 @@ if ($_GET["g"] == "hotMenu") {
             icon: "success",
             timer:1500,
           }).then(function() {
-            window.location.href = "menuProduct.php";
+            window.location.href = "listImgShow.php?id=' . $_GET["idUp"] . '";
         });
        });
         </script>';
+    } else if ($update and $_GET['p'] == "") {
+        echo '<script>
+        $(document).ready(function(){
+         Swal.fire({
+             title: "บันทึกข้อมูล",
+             text: "บันทึกข้อมูลเรียบร้อยแล้ว!",
+             icon: "success",
+             timer:1500,
+           }).then(function() {
+             window.location.href = "menuProduct.php";
+         });
+        });
+         </script>';
+    }
+}
+
+if ($_GET["g"] == "insertCus") {
+
+    $imgCus = $_FILES["imgCustomer"]["name"];
+    copy($_FILES["imgCustomer"]["tmp_name"], "../images/customer/" . $imgCus . "");
+
+    $cus = $coon->prepare("INSERT INTO customer(cus_img) VALUES (?)");
+    $cus->execute([$imgCus]);
+
+
+    if ($cus) {
+        echo '<script>
+       $(document).ready(function(){
+        Swal.fire({
+            title: "บันทึกข้อมูล",
+            text: "บันทึกข้อมูลเรียบร้อยแล้ว!",
+            icon: "success",
+            timer:1500,
+          }).then(function() {
+            window.location.href = "customer.php";
+        });
+       });
+        </script>';
+    } else {
+        echo 'no';
+    }
+}
+
+if ($_GET["g"] == "deleteCus") {
+    $delete = $coon->prepare("DELETE FROM customer WHERE cus_id =? ");
+    $delete->execute([$_GET["id"]]);
+    if ($delete) {
+        header("location: customer.php");
+    } else {
+        echo 'no';
+    }
+}
+
+if ($_GET["g"] == "logo") {
+
+    $imgCus = $_FILES["imgLogo"]["name"];
+    copy($_FILES["imgLogo"]["tmp_name"], "../images/logo/" . $imgCus . "");
+
+    $cus = $coon->prepare("INSERT INTO logo(logo_img) VALUES (?)");
+    $cus->execute([$imgCus]);
+
+
+    if ($cus) {
+        echo '<script>
+       $(document).ready(function(){
+        Swal.fire({
+            title: "บันทึกข้อมูล",
+            text: "บันทึกข้อมูลเรียบร้อยแล้ว!",
+            icon: "success",
+            timer:1500,
+          }).then(function() {
+            window.location.href = "logo.php";
+        });
+       });
+        </script>';
+    } else {
+        echo 'no';
+    }
+}
+
+if ($_GET["g"] == "deleteLogo") {
+    $delete = $coon->prepare("DELETE FROM logo WHERE logo_id =? ");
+    $delete->execute([$_GET["id"]]);
+    if ($delete) {
+        header("location: logo.php");
     } else {
         echo 'no';
     }
@@ -351,6 +502,7 @@ if ($_GET["g"] == "deleteSlide") {
         echo 'no';
     }
 }
+
 
 
 if ($_GET["g"] == "updateAboutUs") {

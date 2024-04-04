@@ -34,6 +34,8 @@ include 'session/sessionAdmin.php';
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.min.css" rel="stylesheet">
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+
 
 </head>
 
@@ -78,6 +80,9 @@ include 'session/sessionAdmin.php';
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">เพิ่มเมนูสินค้าหลัก</h1>
+                    </div>
+                    <div class="alert alert-danger" role="alert">
+                        การลบข้อมูลเมนูนี้ จะผลกระทบกับเมนูอื่นๆ วิธีการลบที่ถูกต้องลบจาก สินค้าย่อย > ชื่อสินค้าหลัก > ชื่อเมนูสินค้าหลัก ตามลำดับ!
                     </div>
                     <div class="row">
 
@@ -133,7 +138,7 @@ include 'session/sessionAdmin.php';
                                                 <td><button type="button" class="btn btn-primary btn-sm editTool1" data-bs-toggle="button" aria-pressed="false" autocomplete="off" data-id="<?= $rowTool1["group_type_id"] ?>" data-toggle="modal" data-target="#editTool1">
                                                         แก้ไข
                                                     </button>
-                                                    <button id="deleteMainMenu" type="button" class="btn btn-danger btn-sm" data-id="<?= $rowTool1["group_type_id"] ?>">
+                                                    <button id="" type="button" class="btn btn-danger btn-sm deleteMainMenu" data-id="<?= $rowTool1["group_type_id"] ?>">
                                                         ลบ
                                                     </button>
 
@@ -152,10 +157,10 @@ include 'session/sessionAdmin.php';
                         <div class="col-md-4">
                             <form action="insertData.php?g=inSubMenu" method="post" enctype="multipart/form-data">
                                 <div class="mb-3 form-group">
-                                    <label for="" class="form-label">เมนูหลัก</label>
+                                    <label for="" class="form-label">ชื่อสินค้าหลัก</label>
                                     <select class="form-control" name="mainMenu" id="">
 
-                                        <option value="0">-- เมนูหลัก --</option>
+                                        <option value="0">-- ชื่อสินค้าหลัก --</option>
                                         <?php
                                         $listName = $coon->prepare(" SELECT* FROM group_product ");
                                         $listName->execute();
@@ -301,7 +306,7 @@ include 'session/sessionAdmin.php';
                                 $n = 1;
                                 while ($rowTool3 = $tool3->fetch(PDO::FETCH_ASSOC)) {
 
-                                    echo "hh->" . $rowTool3["sub_type_id"];
+                                    // echo "hh->" . $rowTool3["sub_type_id"];
 
                                 ?>
                                     <table class="table table-bordered">
@@ -311,7 +316,8 @@ include 'session/sessionAdmin.php';
                                                 <p><?= $obj3->subMain3($rowTool3["sub_type_id"]) ?></p>
                                                 <hr>
                                                 <th scope="col">no.</th>
-                                                <th scope="col" style="width: 50%;">ชื่อเมนู</th>
+                                                <th scope="col" style="width: 30%;">ชื่อเมนู</th>
+                                                <th scope="col" style="width: 18%;">รหัสสินค้า</th>
                                                 <th scope="col" style="width: 10%;">hot menu</th>
                                                 <th scope="col">แก้ไข / ลบ</th>
                                             </tr>
@@ -323,6 +329,7 @@ include 'session/sessionAdmin.php';
 
                                         </tbody>
                                     </table>
+                                    <div class="readAll"> <a href="listImgShow.php?id=<?= $rowTool3["sub_type_id"] ?>&p=l">ดูทั้งหมด</a> </div>
                                 <?php
                                     $n++;
                                 }
@@ -619,7 +626,7 @@ include 'session/sessionAdmin.php';
 
         });
 
-        $("#deleteMainMenu").click(function() {
+        $(".deleteMainMenu").click(function() {
             var dataId = $(this).attr("data-id");
             var url = 'insertData.php?g=deleteMainMenu&id=' + dataId;
 
@@ -642,7 +649,7 @@ include 'session/sessionAdmin.php';
 
         })
 
-        $("#deleteSubMenu").click(function() {
+        $(".deleteSubMenu").click(function() {
             var dataId = $(this).attr("data-id");
             var url = 'insertData.php?g=deleteSubMenu&id=' + dataId;
 
@@ -665,7 +672,7 @@ include 'session/sessionAdmin.php';
 
         })
 
-        $("#deleteProductMenu").click(function() {
+        $(".deleteProductMenu").click(function() {
             var dataId = $(this).attr("data-id");
             var url = 'insertData.php?g=deleteProductMenu&id=' + dataId;
 

@@ -1,4 +1,4 @@
-<div class="container-fluid slideMain">
+<div class="container-fluid slideMain" data-aos="fade-left" data-aos-delay="800">
     <div class="single-item">
         <?php
         include '../coon/config.php';

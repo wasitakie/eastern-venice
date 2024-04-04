@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;600;700&family=Sarabun:ital,wght@0,300;0,600;0,700;1,800&display=swap');
+* {
+  font-family: "Prompt", sans-serif ;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bannerFluid {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: #FF6C1D;
+  padding: 0.8rem 0.8rem 0.8rem 0rem;
+}
+
+.bannerFluid .logo {
+  display: block;
+  width: 500px;
+  height: auto;
+  padding-left: 1rem;
+}
+
+.bannerFluid .logo img {
+  width: 100%;
+  height: auto;
+}
+
+.search{
+  display: block;
+  width: auto;
+}
+.searchMo{display: none;}
+
+
+
+@media only screen and (max-width: 1023px) {
+ 
+  .bannerFluid .logo {
+
+    width: 500px;
+    height: auto;
+    padding-left: 1rem;
+  }
+  
+  .bannerFluid .logo img {
+    width: 100%;
+    height: auto;
+  }
+
+  .search{
+    display: none;
+    width: auto;
+  }
+
+  .searchMo{
+    display: flex;
+    justify-items: end;
+    justify-content: end;
+    width: 100%;
+    align-items: end;
+    margin-bottom: 1rem;
+  }
+
+  .searchMo .formSearch{
+    display: block;
+  }
+  
+  .searchBer1{
+    display: block;
+    border: 0.5px #2c2c2c solid;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+  }
+  .iconSearch1{
+    display: block;
+    margin-top: -1.5rem;
+    margin-left: 190px;
+    cursor: pointer;
+    
+  }
+}
+
+
+.textTitle {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  background-color: #FF6C1D;
+  border-radius: 0.5rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.cardImg {
+  display: block;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  text-align: center;
+}
+.cardImg img {
+  padding: 0.5rem;
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: scale-down;
+  margin: auto;
+}
+
+.card-text b {
+  color: #717171;
+}
+
+.card-text span {
+  font-weight: bold;
+  color: #a87b51;
+  font-size: 18px;
+}
+
+.btnCard {
+  display: block;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 2rem;
+  background-color: #f8d0ac;
+  border: 0px;
+  margin: auto;
+  border-radius: 0.5rem;
+}
+
+.btnCard:hover {
+  display: block;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 2rem;
+  background-color: #ace0f8;
+  border: 0px;
+  margin: auto;
+  border-radius: 0.5rem;
+}
+
+.fa-circle-plus,
+.fa-circle-minus {
+  font-size: 30px;
+  cursor: pointer;
+  color: #707070;
+}
+
+.bigBox {
+  margin-left: 0.8rem;
+}
+
+
+
+.hotLine {
+  color: #fff;
+}
+.hotLine p {
+  font-size: 14px;
+}
+
+.searchBer{
+  display: block;
+  border: 0.5px #fff solid;
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+}
+.iconSearch{
+  display: block;
+  margin-top: -1.5rem;
+  margin-left: 190px;
+  cursor: pointer;
+  
+}
+
+.mainFooter {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 5rem;
+  padding: 1.5rem 0rem;
+  background-color: #4B3107;
+  color: #fff;
+  font-size: 14px;
+}
+
+.mainContact{
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mainContact .icon{
+  text-align: center;
+  width: 90px;
+  height: 90px;
+  background-color: #f8d0ac;
+  padding: 0.5rem 2rem ;
+  
+}
+
+
+.mainContact .icon i {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 30px;
+  
+}
+
+.mainAboutUs {
+  font-family: "Sarabun", sans-serif ;
+  
+}
+
+.mainText{
+  margin-left: 1rem;
+}
+
+.mainText p{
+  color: #a87b51;
+  font-size: 15px;
+}
+
+#topofmenu {
+  display: block;
+}
+
+#topofmenuPd {
+  display: block;
+  margin-left: 0rem;
+}
+
+
+@media only screen and (max-width: 1023px) {
+  #topofmenu {
+    display: none;
+  }
+  
+  #topofmenuPd {
+    width: 100%;
+    display: block;
+  padding-left: 1.5rem;
+  }
+}
+
+.map {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.map img {
+  width: 100%;
+  height: auto;
+}
+
+.tagA {
+  text-decoration: none;
+  color: unset;
+}
+
+.borderColor {
+  border: 1pt solid #cdcdcd;
+  border-radius: 0.5rem;
+}
+
+.borderColor:hover {
+  margin-top: -0.1rem;
+  border: 1pt solid #e4e4e4;
+  box-shadow: 5px 6px #dfdfdf;
+}
+.slideImg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.slideImg img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+ #topofmenu {
+  display: none;
+  margin-left: 1rem;
+ }
+
+ #topofmenuPd {
+  display: block;
+  padding-left:  1.5rem;
+}
+
+}

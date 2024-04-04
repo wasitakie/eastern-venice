@@ -5,6 +5,8 @@ include '../coon/config.php';
 $dk = $coon->prepare(" SELECT * FROM group_product WHERE group_type_id = ?");
 $dk->execute([$_GET["id"]]);
 $row = $dk->fetch(PDO::FETCH_ASSOC);
+
+$groupText = $row["group_text"];
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +16,7 @@ $row = $dk->fetch(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="keywords" content="<?= $row["group_keywords"] ?>">
     <meta name="description" content="<?= $row["group_description"] ?>">
-
+    <link rel="icon" type="image/x-icon" href="../images/bkImg1.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../boot/css/bootstrap.min.css">
@@ -25,15 +27,18 @@ $row = $dk->fetch(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/menu.css">
     <link rel="stylesheet" href="../css/slide.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title><?php include '../title-footer/title.php' ?></title>
 </head>
 
 <body>
     <?php include  '../bannner/banner.php' ?>
-
+    <div class="spaeTop"></div>
     <div class="container-fluid" style="padding-left: 0px;">
         <div class="row">
-            <div class="col-md-2 col-lg-3 col-xl-2" id="topofmenu">
+            <div class="col-md-2 col-lg-3 col-xl-2" id="topofmenu" data-aos="fade-right" data-aos-delay="800">
                 <?php include '../menu/menu.php'; ?>
             </div>
             <div class="col-md-10 col-lg-9 col-xl-10 " id="topofmenuPd">
@@ -48,13 +53,15 @@ $row = $dk->fetch(PDO::FETCH_ASSOC);
                     $rowEditTool1 = $editTool1->fetch(PDO::FETCH_ASSOC)
                     ?>
 
-                    <div class="textTitle">
-                        <?= $rowEditTool1["group_text"] ?>
+                    <div class="textTitle" data-aos="flip-up" data-aos-delay="800">
+                        <?= $groupText ?>
                     </div>
 
-                    <div class="h3" id="topofpage"><?= $_GET["name"] ?></div>
-                    <hr>
-                    <div class="subLink">
+                    <div class="h3" id="topofpage" data-aos="fade-up" data-aos-delay="800"><?= $_GET["name"] ?>
+                        <hr>
+                    </div>
+
+                    <div class="subLink" data-aos="fade-up" data-aos-delay="800">
                         <a href="../pages/index.php">หน้าหลัก/</a>
                         <a href="../pages/productGroup.php?id=<?= $_GET["id"] ?>&name= <?= $_GET["name"] ?>"><?= $_GET["name"] ?></a>
                     </div>
@@ -71,6 +78,20 @@ $row = $dk->fetch(PDO::FETCH_ASSOC);
             arrows: true,
             autoplay: true,
             dots: true
+        });
+        AOS.init();
+
+
+        $(document).ready(function() {
+            $('.bannerFluid .logo').css('width', 500);
+
+            $(window).bind('scroll', function() {
+                if ($(window).scrollTop() > 10) {
+                    $('.bannerFluid .logo').css('width', 400);
+                } else {
+                    $('.bannerFluid .logo').css('width', 500);
+                }
+            });
         });
     </script>
 </body>

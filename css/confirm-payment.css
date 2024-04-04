@@ -1,16 +1,18 @@
-.mainConfirm {
+.mainCustomer {
     display: block;
-    width: auto;
+    width: 100%;
     height: auto;
     padding: 1rem;
-    border-radius: 0.5rem;
+    text-align: center;
 }
 
-
-
-.boxText{
-    
+.mainCustomer img {
+    display: block;
+    width: 60%;
+    height: auto;
+    margin: auto;
 }
+
 
 
 

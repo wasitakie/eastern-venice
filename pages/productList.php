@@ -1,4 +1,4 @@
-<div class="productList">
+<div class="productList" data-aos="fade-up" data-aos-delay="800">
     <div class="row">
         <?php
 
@@ -16,7 +16,7 @@
             $rowGroupName["sub_group_id"];
 
         ?>
-            <div class="col-md-3 col-lg-6 col-xl-3  my-3 ">
+            <div class="col-md-4 col-lg-6 col-xl-3 col-sm-4 my-3 animationBox">
 
                 <div class="card borderColor">
                     <a href="slideProduct.php?id=<?= $rowItem["product_images_id"] ?>&name=<?= $rowGroupName["sub_type_product"]; ?>&name1=<?= $rowItem["product_images_name"] ?>&group=<?= $_GET["id"] ?>&main=<?= $rowGroupName["sub_group_id"] ?>" class="tagA">

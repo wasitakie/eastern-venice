@@ -67,7 +67,7 @@ $upFile = $rowedit3["product_images_file"];
 
 <script>
     $("#FilUploader").change(function() {
-        var fileExtension = ['jpeg', 'jpg', 'png', 'gif', 'bmp'];
+        var fileExtension = ['jpeg', 'jpg'];
         if ($.inArray($(this).val().split('.').pop().toLowerCase(), fileExtension) == -1) {
             alert("กรุณาใส่รูปนามสกุลไฟล์ให้ถุกต้อง : " + fileExtension.join(', '));
             $("#FilUploader").val("");

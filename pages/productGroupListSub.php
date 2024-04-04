@@ -1,4 +1,4 @@
-<div class="productList">
+<div class="productList" data-aos="fade-up" data-aos-delay="800">
     <div class="row">
         <?php
         include '../coon/config.php';
@@ -9,7 +9,7 @@
             $image1 = explode("/", $rowList["product_images_file"]);
 
         ?>
-            <div class="col-md-3 col-lg-6 col-xl-3  my-3 ">
+            <div class="col-md-4 col-lg-6 col-xl-3 col-sm-4  my-3 ">
                 <div class="card borderColor">
                     <a href="slideProduct.php?id=<?= $rowList["product_images_id"] ?>&name=<?= $_GET["name"] ?>&name1=<?= $rowList["product_images_name"] ?>&group=<?= $_GET["id"] ?>&main=<?= $_GET["group"] ?>" class="tagA">
                         <div class="cardImg">
